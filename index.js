@@ -4,7 +4,7 @@ var stylus = require('stylus');
 var fs = require('fs');
 
 var files = 'one two three four'.split(' ').map(function (file) {
-  return fs.readFileSync('./demos/' + file + '.styl', 'utf8');
+  return fs.readFileSync(__dirname + '/demos/' + file + '.styl', 'utf8');
 });
 
 function rnd() {
