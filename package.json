@@ -1,0 +1,14 @@
+{
+  "name": "gdb-demo",
+  "version": "0.0.0",
+  "description": "gdb example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Remy Sharp",
+  "license": "MIT",
+  "dependencies": {
+    "stylus": "~0.28.2"
+  }
+}
