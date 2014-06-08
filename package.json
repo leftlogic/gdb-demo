@@ -8,5 +8,7 @@
   },
   "author": "Remy Sharp",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "heapdump": "~0.2.9"
+  }
 }

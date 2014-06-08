@@ -26,11 +26,11 @@ module.exports = {
       ctr--;
       var m = new Message((100 - ctr) + '\n');
       res.write(m.toString());
-    }, 200);
+    }, 20);
 
     setTimeout(function () {
       res.end();
-    }, (200 * 100) + 201);
+    }, (20 * 100) + 201);
   },
   three: function three(res) {
     var ctr = 100;
