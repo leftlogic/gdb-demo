@@ -1,32 +1,19 @@
 'use strict';
 var http = require('http');
-var stylus = require('stylus');
-var fs = require('fs');
+var trouble = require('./trouble');
 
-var files = 'one two three four'.split(' ').map(function (file) {
-  return fs.readFileSync(__dirname + '/demos/' + file + '.styl', 'utf8');
-});
+var methods = 'one two three'.split(' ');
 
 function rnd() {
-  return Math.random() * files.length | 0;
+  return Math.random() * methods.length | 0;
 }
 
 http.createServer(function (req, res) {
-  var css = '/* empty */';
+  var i = rnd();
+  var method = trouble[methods[i]];
 
-  var source = files[rnd()];
+  console.log('method %s [%s]', method, i);
 
-  try {
-    stylus(source).render(function (error, result) {
-      if (error) {
-        if (console) {
-          console.error(error);
-        }
-        return;
-      }
-      css = result.trim();
-    });
-  } catch (e) {}
-
-  res.end(css);
+  res.writeHead(200, {'content-type': 'text/html'});
+  method(res);
 }).listen(process.env.PORT || 8000);
