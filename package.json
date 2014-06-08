@@ -8,7 +8,5 @@
   },
   "author": "Remy Sharp",
   "license": "MIT",
-  "dependencies": {
-    "stylus": "~0.28.2"
-  }
+  "dependencies": {}
 }
