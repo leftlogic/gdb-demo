@@ -1,4 +1,5 @@
 'use strict';
+var agent = require('webkit-devtools-agent');
 var http = require('http');
 var trouble = require('./trouble');
 

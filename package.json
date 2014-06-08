@@ -8,5 +8,7 @@
   },
   "author": "Remy Sharp",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "webkit-devtools-agent": "~0.2.4"
+  }
 }
